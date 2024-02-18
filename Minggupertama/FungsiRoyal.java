@@ -1,3 +1,4 @@
+package Minggupertama;
 public class FungsiRoyal {
     public static void main(String[] args) {
         double totalgarden1 = 0; 

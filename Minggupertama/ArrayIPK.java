@@ -1,4 +1,4 @@
-package Prakpertamaku;
+package Minggupertama;
 
 import java.util.Scanner;
 

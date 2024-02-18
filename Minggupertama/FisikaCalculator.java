@@ -1,3 +1,4 @@
+package Minggupertama;
 import java.util.Scanner;
 
 public class FisikaCalculator {

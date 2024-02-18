@@ -1,7 +1,7 @@
-
+package Minggupertama;
 
 import java.util.Scanner;
-package Minggupertama;
+
 public class ArrayPlatkota {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
