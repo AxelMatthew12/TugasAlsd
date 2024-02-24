@@ -117,13 +117,30 @@ public class Platnomor {
                 case 2 :
                 masukmenu();
                 break;
-        
+            
             default:
                 break;
         }
     }
     static void infokode(){
-
+        Scanner sc= new Scanner(System.in);
+        System.out.println("=========================");
+        System.out.println("||       WELCOME       ||");
+        System.out.println("||     1.MASUK         ||");
+        System.out.println("||     2.KELUAR        ||");
+        System.out.println("||=====================||");
+        System.out.println("||option : ||");
+        int option= sc.nextInt();
+        switch (option) {
+            case 1:
+                System.out.println("Masukkan Huruf depan plat nomor anda : ");
+                String masukplat= sc.nextLine();
+                
+                break;
+        
+            default:
+                break;
+        }
     }
     static void keluarmenu(){
 
