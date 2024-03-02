@@ -1,4 +1,4 @@
-package Mingguketiga.Tugas;
+package Mingguketiga.Tugas.Mahasiswa;
 import java.util.Scanner;
 
 public class MahasiswaDemo {

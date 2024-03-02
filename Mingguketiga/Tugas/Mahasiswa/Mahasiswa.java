@@ -1,4 +1,4 @@
-package Mingguketiga.Tugas;
+package Mingguketiga.Tugas.Mahasiswa;
 
 public class Mahasiswa {
     public String nama;
