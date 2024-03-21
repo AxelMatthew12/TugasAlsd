@@ -1,4 +1,4 @@
-package Mingguketiga.Praktikum03;
+package Maret.Mingguketiga.Praktikum03;
 import java.util.Scanner;
 
 public class PersegiPanjangDemo {

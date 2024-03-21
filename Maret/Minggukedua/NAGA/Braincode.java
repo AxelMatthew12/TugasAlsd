@@ -1,4 +1,4 @@
-package Minggukedua.NAGA;
+package Maret.Minggukedua.NAGA;
 
 public class Braincode {
     

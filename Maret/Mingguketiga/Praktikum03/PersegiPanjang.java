@@ -1,4 +1,4 @@
-package Mingguketiga.Praktikum03;
+package Maret.Mingguketiga.Praktikum03;
 
 public class PersegiPanjang {
     // Deklarasi atribut panjang dan lebar

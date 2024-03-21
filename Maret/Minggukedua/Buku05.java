@@ -1,4 +1,4 @@
-package Minggukedua;
+package Maret.Minggukedua;
 
 public class Buku05 {
     public static void main(String[] args) {

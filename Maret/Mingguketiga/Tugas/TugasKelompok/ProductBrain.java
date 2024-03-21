@@ -1,4 +1,4 @@
-package Mingguketiga.Tugas.TugasKelompok;
+package Maret.Mingguketiga.Tugas.TugasKelompok;
 
 class ProductBrain {
     private Menu[] pesanan;

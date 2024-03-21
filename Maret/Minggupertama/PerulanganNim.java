@@ -1,4 +1,4 @@
-package Minggupertama;
+package Maret.Minggupertama;
 
 import java.util.Scanner;
 

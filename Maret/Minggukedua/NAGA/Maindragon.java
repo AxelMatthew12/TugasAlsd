@@ -1,4 +1,4 @@
-package Minggukedua.NAGA;
+package Maret.Minggukedua.NAGA;
 
 import java.util.Scanner;
 

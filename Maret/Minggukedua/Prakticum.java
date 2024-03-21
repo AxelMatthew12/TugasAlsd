@@ -1,4 +1,4 @@
-package Minggukedua;
+package Maret.Minggukedua;
 
 public class Prakticum {
     
