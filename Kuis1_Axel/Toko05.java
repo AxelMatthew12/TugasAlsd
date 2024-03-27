@@ -32,7 +32,7 @@ public class Toko05 {
                 System.out.println("  || Terjual sebanyak ?  ||");
                 int terjual = scanner.nextInt();
                 scanner.nextLine(); 
-            // apa kegunaan dari code ini ?
+            
             daftarProduk[i] = new Brain05();
             daftarProduk[i].nama = nama;
             daftarProduk[i].merk = merk;
