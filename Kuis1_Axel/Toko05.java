@@ -17,11 +17,12 @@ public class Toko05 {
             // deklarasi array
             Brain05[] daftarProduk = new Brain05[jumlahProduk];
             // mengapa menggunakan for loop
-            for (int i = 0; i <= jumlahProduk; i++) {
+            for(int i = 0; i < jumlahProduk; i++) {
+                
                 System.out.println("=========================================================");
                 System.out.println("Masukkan informasi untuk produk ke-" + (i + 1) + ":");
                 System.out.println("||   Kategori: Laptop/L, Hp/H , TV/T ||");
-                System.out.println("  ||  Kategori Code:   ||");
+                System.out.println("||  Kategori Code:   ||");
                 String kategori = scanner.nextLine();
                 System.out.print("  ||  Nama:            ||");
                 String nama = scanner.nextLine();

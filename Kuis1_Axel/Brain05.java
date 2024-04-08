@@ -50,15 +50,15 @@ public class Brain05 {
         System.out.println("Sisa stok: " + sisa);
     }
 
-    public void cariproduk05(int jumlahStok) {
+    // public void cariproduk05(int jumlahStok) {
         
-        if (stok == jumlahStok) {
-            System.out.println("Produk dengan stok " + jumlahStok + " ditemukan: ");
-            tampil05();
-        } else {
-            System.out.println("Produk dengan stok " + jumlahStok + " tidak ditemukan.");
-        }
-    }
+    //     if (stok == jumlahStok) {
+    //         System.out.println("Produk dengan stok " + jumlahStok + " ditemukan: ");
+    //         tampil05();
+    //     } else {
+    //         System.out.println("Produk dengan stok " + jumlahStok + " tidak ditemukan.");
+    //     }
+    // }
 
     
     public void daftarproduk() {
