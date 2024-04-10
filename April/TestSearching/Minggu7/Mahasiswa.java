@@ -14,6 +14,14 @@ public class Mahasiswa {
         umur = u;
         ipk = i;
     }
+    public static void sequentialSearch(int[] arr, int key){
+        for(int i = 0; i < arr.length; i++) {
+            if (i == key) {
+                System.out.println("Data ditemukan pada indeks ke-"+ i);
+            }
+        }
+        System.out.println("Data tidak ditemukkan");
+    }
 
     void tampil() {
         System.out.println("Nim  = " + nim);
@@ -74,12 +82,34 @@ public class Mahasiswa {
             }
         }
     }
+    public static int binartSearchAsc(int[] arr, int key){
+        int start = 0, end = arr.length -1;
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            if (arr[mid] == key) {
+                return mid;
+            }
+            if (arr[mid] < key) {
+                start = mid -1;
+            }
+        }
+        return -1;
+    }
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-
+        int[] daftarNilai = {10,5,20,15,5,45};
+        sequentialSearch(daftarNilai,5);
         PencarianMhs data = new PencarianMhs();
         int jumMhs = 5;
+        int [] sortedNilai = {5,5,10,20,30,40,50};
+        int index = binartSearchAsc(sortedNilai,5);
+        if (index != -1) {
+            System.out.println("Data ditemukan pada index ke-" + index);
+        }
+        else {
+            System.out.println("Data tidak ditemukkan");
+        }
 
         System.out.println("------------------------");
         System.out.println("Masukkan data mahasiswa secara Urut dari Nim");
