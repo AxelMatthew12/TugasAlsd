@@ -1,11 +1,10 @@
 package April.TestSearching.Minggu7;
-
 import java.util.Scanner;
 
 public class Mahasiswa {
     int nim;
     String nama;
-    float umur;
+    int umur;
     double ipk;
 
     Mahasiswa(int ni, String n, int u, double i) {
@@ -14,14 +13,6 @@ public class Mahasiswa {
         umur = u;
         ipk = i;
     }
-    public static void sequentialSearch(int[] arr, int key){
-        for(int i = 0; i < arr.length; i++) {
-            if (i == key) {
-                System.out.println("Data ditemukan pada indeks ke-"+ i);
-            }
-        }
-        System.out.println("Data tidak ditemukkan");
-    }
 
     void tampil() {
         System.out.println("Nim  = " + nim);
@@ -29,118 +20,31 @@ public class Mahasiswa {
         System.out.println("Umur = " + umur);
         System.out.println("IPK  = " + ipk);
     }
-
-    public static class PencarianMhs {
-        Mahasiswa listMhs[] = new Mahasiswa[5];
-        int idx;
-
-        void tambah(Mahasiswa m) {
-            if (idx < listMhs.length) {
-                listMhs[idx] = m;
-                idx++;
-            } else {
-                System.out.println("Data sudah penuh !!");
-            }
-        }
-
-        void tampil() {
-            for (Mahasiswa m : listMhs) {
-                if (m != null) {
-                    m.tampil();
-                    System.out.println("===================");
-                }
-            }
-        }
-
-        public int FindSeqSearch(int cari) {
-            int posisi = -1;
-            for (int j = 0; j < listMhs.length; j++) {
-                if (listMhs[j] != null && listMhs[j].nim == cari) {
-                    posisi = j;
-                    break;
-                }
-            }
-            return posisi;
-        }
-
-        public void Tampilposisi(int x, int pos) {
-            if (pos != -1) {
-                System.out.println("Data : " + x + " Ditemukan data pada indeks " + pos);
-            } else {
-                System.out.println("Data " + x + " tidak ditemukan");
-            }
-        }
-
-        public void TampilData(int x, int pos) {
-            if (pos != -1) {
-                System.out.println("Nim\t    : " + x);
-                System.out.println("Nama\t   : " + listMhs[pos].nama);
-                System.out.println("Umur\t   : " + listMhs[pos].umur);
-                System.out.println("IPK\t  : " + listMhs[pos].ipk);
-            } else {
-                System.out.println("Data " + x + " tidak ditemukan");
-            }
-        }
-    }
-    public static int binartSearchAsc(int[] arr, int key){
-        int start = 0, end = arr.length -1;
-        while (start <= end) {
-            int mid = start + (end - start) / 2;
-            if (arr[mid] == key) {
-                return mid;
-            }
-            if (arr[mid] < key) {
-                start = mid -1;
-            }
-        }
-        return -1;
-    }
-
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int[] daftarNilai = {10,5,20,15,5,45};
-        sequentialSearch(daftarNilai,5);
-        PencarianMhs data = new PencarianMhs();
-        int jumMhs = 5;
-        int [] sortedNilai = {5,5,10,20,30,40,50};
-        int index = binartSearchAsc(sortedNilai,5);
-        if (index != -1) {
-            System.out.println("Data ditemukan pada index ke-" + index);
-        }
-        else {
-            System.out.println("Data tidak ditemukkan");
-        }
-
-        System.out.println("------------------------");
-        System.out.println("Masukkan data mahasiswa secara Urut dari Nim");
-        for (int i = 0; i < jumMhs; i++) {
-            System.out.println("----------------");
-            System.out.println("NIM\t: ");
-            int nim = s.nextInt();
-            System.out.println("Nama\t: ");
-            s.nextLine(); // Consume newline left-over
-            String nama = s.nextLine();
-            System.out.println("Umur\t: ");
-            int umur = s.nextInt();
-            System.out.println("IPK\t: ");
-            double ipk = s.nextDouble();
-
-            Mahasiswa m = new Mahasiswa(nim, nama, umur, ipk);
-            data.tambah(m);
-        }
-        data.tampil();
-
-        System.out.println("----------------------------------------");
-        System.out.println("----------------------------------------");
-        System.out.println("Pencarian Data : ");
-        System.out.println("Masukkan Nim Mahasiswa yang dicari: ");
-        System.out.println("NIM : ");
-        int cari = s.nextInt();
-        System.out.println("Menggunakan sequential Search");
-        int posisi = data.FindSeqSearch(cari);
-
-        data.Tampilposisi(cari, posisi);
-        data.TampilData(cari, posisi);
-    }
+    public class MahasiswaMain{
+        public static void main(String[] args) {
+            Scanner s = new Scanner(System.in);
     
+            PencarianMhs data = new PencarianMhs();
+            int jumMhs = 5;
+    
+            System.out.println("------------------------");
+            System.out.println("Masukkan data mahasiswa secara Urut dari Nim");
+            for (int i = 0; i < jumMhs; i++) {
+                System.out.println("----------------");
+                System.out.println("NIM\t: ");
+                int nim = s.nextInt();
+                System.out.println("Nama\t: ");
+                s.nextLine(); // Consume newline left-over
+                String nama = s.nextLine();
+                System.out.println("Umur\t: ");
+                int umur = s.nextInt();
+                System.out.println("IPK\t: ");
+                double ipk = s.nextDouble();
+    
+                Mahasiswa m = new Mahasiswa(nim, nama, umur, ipk);
+                data.tambah(m);
+            }
+            data.tampil();
+        }
+}
 }
