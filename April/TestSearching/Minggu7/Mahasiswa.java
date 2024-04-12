@@ -45,6 +45,23 @@ public class Mahasiswa {
                 data.tambah(m);
             }
             data.tampil();
+            
+            System.out.println("-----------------------------");
+            System.out.println("-----------------------------");
+            System.out.println("Pencarian Data : ");
+            System.out.println("Masukkan Nim Mahasiswa yang dicari : ");
+            System.out.println("NIM : ");
+            int cari = s.nextInt();
+            System.out.println("menggunakan sequential Search");
+            int posisi = data.FindSeqSearch(cari);
+            data.Tampilposisi(cari, posisi);
+            data.TampilData(cari, posisi);
+        
+            System.out.println("=============================");
+            System.out.println("menggunakan binary Search");
+            posisi = data.FindBinarySeacrh(cari,0, jumMhs-1);
+            data.Tampilposisi(cari,posisi);
+            data.TampilData(cari, posisi);
         }
 }
 }

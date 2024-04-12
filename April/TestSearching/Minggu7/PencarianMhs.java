@@ -32,6 +32,20 @@ public class PencarianMhs {
         }
         return posisi;
     }
+    public int FindBinarySeacrh(int cari, int left, int right) {
+        int mid;
+        if (right >= left) {
+            mid = (left + right) / 2;
+            if (cari == listMhs[mid].nim) {
+               return (mid); 
+            }else if (listMhs[mid].nim > cari) {
+                return FindBinarySeacrh(cari, left,mid -1);
+            } else {
+                return FindBinarySeacrh(cari,mid + 1, right);
+            }
+        }
+        return -1;
+    }
 
     public void Tampilposisi(int x, int pos) {
         if (pos != -1) {
