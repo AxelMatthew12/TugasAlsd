@@ -26,45 +26,6 @@ public class Rekening {
     }
 }
 
-class PencarianNasabah {
-    Rekening[] listNsb = new Rekening[5];
-    int idx = 0;
-
-    void tambah(Rekening r) {
-        if (idx < listNsb.length) {
-            listNsb[idx] = r;
-            idx++;
-        } else {
-            System.out.println("Data sudah penuh!");
-        }
-    }
-
-    void tampilkan() {
-        for (Rekening r : listNsb) {
-            if (r != null) {
-                r.tampilkan();
-                System.out.println("===============");
-            }
-        }
-    }
-    
-   
-    void sortByNamaDescending() {
-        for (int i = 0; i < idx - 1; i++) {
-            int maxIndex = i;
-            for (int j = i + 1; j < idx; j++) {
-                // Cari indeks dengan nama terbesar
-                if (listNsb[j].nama.compareTo(listNsb[maxIndex].nama) > 0) {
-                    maxIndex = j;
-                }
-            }
-            // Tukar elemen di posisi i dengan elemen di posisi maxIndex
-            Rekening temp = listNsb[i];
-            listNsb[i] = listNsb[maxIndex];
-            listNsb[maxIndex] = temp;
-                }
-            }
-        }
 
 
     

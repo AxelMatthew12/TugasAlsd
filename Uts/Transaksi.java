@@ -26,30 +26,30 @@ public class Transaksi {
         System.out.println("========================");
     }
 }
- class PencarianTransaksi {
-    public Transaksi[] listtF = new Transaksi[5];
-    public int idx = 0;
+//  class PencarianTransaksi {
+//     public Transaksi[] listtF = new Transaksi[5];
+//     public int idx = 0;
 
-     void tambah(Transaksi t) {
-        if (idx < listtF.length) {
-            listtF[idx] = t;
-            idx++;
-        } else {
-            System.out.println("Data sudah penuh!");
-        }
-    }
+//      void tambah(Transaksi t) {
+//         if (idx < listtF.length) {
+//             listtF[idx] = t;
+//             idx++;
+//         } else {
+//             System.out.println("Data sudah penuh!");
+//         }
+//     }
 
 
-    void tampilkan() {
-        for (Transaksi t : listtF) {
-            if (t != null) {
-                t.Tampil();
-                System.out.println("===============");
-                }
-  }
- }
+//     void tampilkan() {
+//         for (Transaksi t : listtF) {
+//             if (t != null) {
+//                 t.Tampil();
+//                 System.out.println("===============");
+//                 }
+//   }
+//  }
  
-}
+
 
         
     

@@ -4,14 +4,12 @@ import java.util.Scanner;
 public class Bank {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        PencarianNasabah pencarianNasabah = new PencarianNasabah();
         
-
         System.out.println("Jumlah Nasabah yang ditangani:");
-        int jumNsb = sc.nextInt();
-        sc.nextLine(); 
-        Rekening[] rekeningArray = new Rekening[jumNsb];
-        Transaksi[] transaksiArray = new Transaksi[jumNsb];
+            int jumNsb = sc.nextInt();
+            sc.nextLine(); 
+             Rekening[] rekeningArray = new Rekening[jumNsb];
+            Transaksi[] transaksiArray = new Transaksi[jumNsb];
 
         for (int i = 0; i < jumNsb; i++) {
             System.out.println("=======================");
@@ -29,7 +27,7 @@ public class Bank {
 
           
             Rekening r = new Rekening(noRekening, nama, namaIbu, phone, email);
-            pencarianNasabah.tambah(r);
+            
 
 
             rekeningArray[i] = r;
@@ -69,11 +67,11 @@ public class Bank {
         }
 
         System.out.println("\nMenampilkan semua data nasabah dan transaksi:");
-    for (int i = 0; i < rekeningArray.length; i++) {
-    System.out.println("=======================");
-    rekeningArray[i].tampilkan();
-    transaksiArray[i].Tampil();
-    }
-}
+        for (int i = 0; i < rekeningArray.length; i++) {
+        System.out.println("=======================");
+        rekeningArray[i].tampilkan();
+        transaksiArray[i].Tampil();
+             }
+        }
     }
 
