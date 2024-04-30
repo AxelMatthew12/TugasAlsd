@@ -132,4 +132,19 @@ class ClothingStack {
             System.out.println("Stack Masih Kosong");
         }
     }
+
+    public void getMax() {
+        if (!isEmpty()) {
+            Pakaian maxPakaian = data[0];
+            for (int i = 1; i <= top; i++) {
+                if (data[i].harga > maxPakaian.harga) {
+                    maxPakaian = data[i];
+                }
+            }
+            System.out.println("Pakaian dengan harga tertinggi : " + maxPakaian.jenis + " " + maxPakaian.warna + " " + maxPakaian.merk + " " + maxPakaian.ukuran + " " + maxPakaian.harga);
+        } else {
+            System.out.println("Stack Masih Kosong!");
+        }
+    }
 }
+
