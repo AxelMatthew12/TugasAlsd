@@ -1,5 +1,4 @@
 package April.praktik1;
-import java.util.Scanner;
 
 public class Que {
     int[] data;
